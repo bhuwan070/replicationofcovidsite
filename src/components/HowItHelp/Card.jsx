@@ -1,8 +1,13 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { SlideLeft, SlideRight } from "../../utility/animations";
 
 const Card = ({ icon, heading, text }) => {
   return (
-    <div
+    <motion.div
+      variants={SlideRight(0.2)}
+      whileInView={"animate"}
+      initial="initial"
       className="p-6 bg-white rounded-lg 
     border-[1px]
      border-gray-300
@@ -14,7 +19,7 @@ const Card = ({ icon, heading, text }) => {
       </div>
       <h4 className="my-4 text-lg font-bold">{heading}</h4>
       <p className="text-gray-400 text-sm">{text}</p>
-    </div>
+    </motion.div>
   );
 };
 

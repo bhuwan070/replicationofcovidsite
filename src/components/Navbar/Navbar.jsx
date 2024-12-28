@@ -1,9 +1,14 @@
 import React from "react";
 import Logo from "../../assets/logo.png";
-
+import { motion } from "framer-motion";
 const Navbar = () => {
   return (
-    <header className="border border-s-orange-400">
+    <motion.header
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.6 }}
+      className="border border-s-orange-400"
+    >
       <div className="container py-5 flex items-center justify-between">
         {/* logo section */}
         <div>
@@ -34,7 +39,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 

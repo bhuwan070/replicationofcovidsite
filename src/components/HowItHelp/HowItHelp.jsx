@@ -3,6 +3,8 @@ import Card from "./Card";
 import Icon1 from "../../assets/icons/1.png";
 import Icon2 from "../../assets/icons/2.png";
 import Icon3 from "../../assets/icons/3.png";
+import { motion } from "framer-motion";
+import { SlideLeft, SlideRight } from "../../utility/animations";
 
 const HowItHelp = () => {
   const cardData = [
@@ -38,7 +40,12 @@ const HowItHelp = () => {
               ))}
             </div>
           </div>
-          <div className="flex flex-col justify-center xl:pr-14">
+          <motion.div
+            variants={SlideLeft(0.6)}
+            whileInView={"animate"}
+            initial="initial"
+            className="flex flex-col justify-center xl:pr-14"
+          >
             <h1
               className="text-3xl font-bold
              text-darkBlur"
@@ -67,7 +74,7 @@ const HowItHelp = () => {
             >
               Get in Touch
             </button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -2,12 +2,19 @@ import React from "react";
 import img1 from "../../assets/uses/1.png";
 import img2 from "../../assets/uses/2.png";
 import img3 from "../../assets/uses/3.png";
+import { motion } from "framer-motion";
+import { SlideLeft, SlideRight } from "../../utility/animations";
 
 const Uses = () => {
   return (
     <section>
       <div className="container my-14">
-        <div className="grid grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <motion.div
+          variants={SlideRight(0.4)}
+          whileInView={"animate"}
+          initial="initial"
+          className="grid grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-6"
+        >
           <div className="flex flex-col justify-center xl:pr-14">
             <h1
               className="text-3xl font-bold
@@ -38,19 +45,31 @@ const Uses = () => {
               Get in Touch
             </button>
           </div>
-          <div>
+          <motion.div
+            variants={SlideLeft(0.4)}
+            initial="initial"
+            whileInView={"animate"}
+          >
             <img src={img1} alt="" className="w-full rounded-3xl" />
             <p className="text-gray-400 mt-4">Coronavirus</p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            variants={SlideLeft(0.6)}
+            initial="initial"
+            whileInView={"animate"}
+          >
             <img src={img2} alt="" className="w-full rounded-3xl" />
             <p className="text-gray-400 mt-4">Diagnostic</p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            variants={SlideLeft(0.8)}
+            initial="initial"
+            whileInView={"animate"}
+          >
             <img src={img3} alt="" className="w-full rounded-3xl" />
             <p className="text-gray-400 mt-4">Symptoms</p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

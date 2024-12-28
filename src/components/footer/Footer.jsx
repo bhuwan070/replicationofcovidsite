@@ -1,10 +1,10 @@
 import React from "react";
 import Img1 from "../../assets/logo.png";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
-
+import { motion } from "framer-motion";
 const Footer = () => {
   return (
-    <footer>
+    <motion.footer initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
       <div className="container py-20 flex flex-col md:flex-row justify-between items-center gap-10">
         <div className="space-y-4">
           <img src={Img1} alt="" className="w-40" />
@@ -19,7 +19,7 @@ const Footer = () => {
           <FaLinkedin className="hover:text-primary" />
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 
