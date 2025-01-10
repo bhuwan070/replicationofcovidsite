@@ -25,7 +25,7 @@ const HowItHelp = () => {
     },
   ];
   return (
-    <section>
+    <section className="w-full overflow-hidden">
       <div className="container py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           <div className="col-span-2">

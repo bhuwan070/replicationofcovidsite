@@ -7,7 +7,7 @@ import { SlideLeft, SlideRight } from "../../utility/animations";
 
 const Uses = () => {
   return (
-    <section>
+    <section className="w-full">
       <div className="container my-14">
         <motion.div
           variants={SlideRight(0.4)}
