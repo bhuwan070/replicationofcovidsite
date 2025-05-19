@@ -59,7 +59,7 @@ const HowItHelp = () => {
             <p className="text-sm text-gray-400 mt-4">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Architecto, quod!{" "}
-              <a href="#" className="text-primary">
+              <a href="/" className="text-primary">
                 Learn More
               </a>
             </p>
