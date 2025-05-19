@@ -20,16 +20,16 @@ const Navbar = () => {
             <a href="#">Home</a>
           </li>
           <li>
-            <a href="#">Products</a>
+            <a href="/">Products</a>
           </li>
           <li>
-            <a href="#">Customer Stories</a>
+            <a href="/">Customer Stories</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="/">About</a>
           </li>
           <li>
-            <a href="#">Blog</a>
+            <a href="/">Blog</a>
           </li>
         </ul>
         {/* Button section */}
